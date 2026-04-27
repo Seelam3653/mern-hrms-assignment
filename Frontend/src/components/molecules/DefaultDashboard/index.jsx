@@ -75,12 +75,12 @@ const DefaultDashboard = () => {
                                     <span className="inline-block w-7">:</span>{dataPegawai.nik}
                                 </h2>
                                 <h2 className="font-medium mb-4 block text-black dark:text-white">
-                                    <span className="inline-block w-32 md:w-40">Nama Pegawai</span>
+                                    <span className="inline-block w-32 md:w-40">Employee Name</span>
                                     <span className="inline-block w-7">:</span>{' '}
                                     <span className="pl-[-10] md:pl-0"></span>{dataPegawai.nama_pegawai}
                                 </h2>
                                 <h2 className="font-medium mb-4 block text-black dark:text-white">
-                                    <span className="inline-block w-32 md:w-40">Tanggal Masuk</span>
+                                    <span className="inline-block w-32 md:w-40">Join Date</span>
                                     <span className="inline-block w-7">:</span>{dataPegawai.tanggal_masuk}
                                 </h2>
                                 <h2 className="font-medium mb-4 block text-black dark:text-white">

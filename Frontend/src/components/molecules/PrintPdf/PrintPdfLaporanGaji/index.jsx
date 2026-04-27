@@ -75,14 +75,14 @@ const PrintPdfLaporanGaji = () => {
       <div className="flex flex-col md:flex-row w-full gap-3 text-center p-6 bg-white dark:bg-meta-4">
         <div>
           <ButtonOne onClick={handlePrint}>
-            <span>Cetak</span>
+            <span>Print</span>
           </ButtonOne>
         </div>
         <div>
           <ButtonTwo
             onClick={() => navigate(-1)}
           >
-            <span>Kembali</span>
+            <span>Back</span>
           </ButtonTwo>
         </div>
       </div >
@@ -106,13 +106,13 @@ const PrintPdfLaporanGaji = () => {
         </h1>
         <div className="w-full md:text-lg">
           <h2 className="font-medium mb-4 block text-black dark:text-white">
-            <span className="inline-block w-32 md:w-40">Bulan</span>
+            <span className="inline-block w-32 md:w-40">Month</span>
             <span className="pl-[-8] md:pl-0"></span>
             <span className="inline-block w-7">:</span>
             {month}
           </h2>
           <h2 className="font-medium mb-4 block text-black dark:text-white">
-            <span className="inline-block w-32 md:w-40">Tahun</span>
+            <span className="inline-block w-32 md:w-40">Year</span>
             <span className="inline-block w-7">:</span>
             {year}
             <span className="pl-[-8] md:pl-0"></span>

@@ -21,7 +21,7 @@ export const changePassword = (password, confPassword) => async (dispatch) => {
     dispatch(changePasswordRequest());
 
     if (password !== confPassword) {
-      dispatch(changePasswordFailure('Password dan Konfirmasi Password Tidak Cocok'));
+      dispatch(changePasswordFailure('Password dan Confirmation Password No Cocok'));
       return;
     }
 

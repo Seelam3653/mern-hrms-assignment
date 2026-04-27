@@ -31,7 +31,7 @@ const FormAddDataPotongan = () => {
             .then((response) => {
                 Swal.fire({
                     icon: 'success',
-                    title: 'Berhasil',
+                    title: 'Success',
                     text: response.message,
                     showConfirmButton: false,
                     timer: 1500,
@@ -41,21 +41,21 @@ const FormAddDataPotongan = () => {
                 if (error.response && error.response.data && error.response.data.msg) {
                     Swal.fire({
                         icon: 'error',
-                        title: 'Gagal',
+                        title: 'Failed',
                         text: error.response.data.msg,
                         confirmButtonText: 'Ok',
                     });
                 } else if (error.message) {
                     Swal.fire({
                         icon: 'error',
-                        title: 'Gagal',
+                        title: 'Failed',
                         text: error.message,
                         confirmButtonText: 'Ok',
                     });
                 } else {
                     Swal.fire({
                         icon: 'error',
-                        title: 'Gagal',
+                        title: 'Failed',
                         text: 'Terjadi kesalahan',
                         confirmButtonText: 'Ok',
                     });
@@ -86,7 +86,7 @@ const FormAddDataPotongan = () => {
 
     return (
         <Layout>
-            <Breadcrumb pageName='Form Data Potongan' />
+            <Breadcrumb pageName='Deduction Form' />
 
             <div className='sm:grid-cols-2'>
                 <div className='flex flex-col gap-9'>
@@ -110,7 +110,7 @@ const FormAddDataPotongan = () => {
                                             value={potongan}
                                             onChange={handleChange}
                                             required={true}
-                                            placeholder='Masukkan potongan'
+                                            placeholder='Enter deduction name'
                                             className='w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary'
                                         />
                                     </div>
@@ -127,7 +127,7 @@ const FormAddDataPotongan = () => {
                                             onChange={handleChange}
                                             required
                                             min="1"
-                                            placeholder='Masukkan jumlah potongan'
+                                            placeholder='Enter deduction amount'
                                             className='w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary'
                                         />
                                     </div>
@@ -136,12 +136,12 @@ const FormAddDataPotongan = () => {
                                 <div className='flex flex-col md:flex-row w-full gap-3 text-center'>
                                     <div>
                                         <ButtonOne  >
-                                            <span>Simpan</span>
+                                            <span>Save</span>
                                         </ButtonOne>
                                     </div>
                                     <Link to="/data-potongan" >
                                         <ButtonTwo  >
-                                            <span>Kembali</span>
+                                            <span>Back</span>
                                         </ButtonTwo>
                                     </Link>
                                 </div>

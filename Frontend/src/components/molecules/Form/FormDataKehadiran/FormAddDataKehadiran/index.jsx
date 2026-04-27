@@ -345,12 +345,12 @@ const FormAddDataKehadiran = () => {
                     <div className="flex flex-col md:flex-row w-full gap-3 text-center py-4">
                         <div>
                             <ButtonOne type="submit">
-                                <span>Simpan</span>
+                                <span>Save</span>
                             </ButtonOne>
                         </div>
                         <Link to="/data-kehadiran">
                             <ButtonTwo>
-                                <span>Kembali</span>
+                                <span>Back</span>
                             </ButtonTwo>
                         </Link>
                     </div>

@@ -33,7 +33,7 @@ const FormEditDataPotongan = () => {
             setMsg(response.data.msg);
             Swal.fire({
                 icon: 'success',
-                title: 'Berhasil',
+                title: 'Success',
                 timer: 1500,
                 text: response.data.msg
             });
@@ -42,7 +42,7 @@ const FormEditDataPotongan = () => {
             setMsg(error.response.data.msg);
             Swal.fire({
                 icon: 'error',
-                title: 'Gagal',
+                title: 'Failed',
                 text: error.response.data.msg
             });
         }
@@ -103,7 +103,7 @@ const FormEditDataPotongan = () => {
                                             value={potongan}
                                             onChange={(e) => setPotongan(e.target.value)}
                                             required={true}
-                                            placeholder='Masukkan potongan'
+                                            placeholder='Enter deduction name'
                                             className='w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary'
                                         />
                                     </div>
@@ -119,7 +119,7 @@ const FormEditDataPotongan = () => {
                                             value={jmlPotongan}
                                             onChange={(e) => setJmlPotongan(e.target.value)}
                                             required
-                                            placeholder='Masukkan jumlah potongan'
+                                            placeholder='Enter deduction amount'
                                             className='w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary'
                                         />
                                     </div>
@@ -133,7 +133,7 @@ const FormEditDataPotongan = () => {
                                     </div>
                                     <Link to="/data-potongan" >
                                         <ButtonTwo  >
-                                            <span>Kembali</span>
+                                            <span>Back</span>
                                         </ButtonTwo>
                                     </Link>
                                 </div>

@@ -54,7 +54,7 @@ const FormEditDataJabatan = () => {
             setMsg(response.data.msg);
             Swal.fire({
                 icon: 'success',
-                title: 'Berhasil',
+                title: 'Success',
                 timer: 1500,
                 text: response.data.msg
             });
@@ -63,7 +63,7 @@ const FormEditDataJabatan = () => {
             setMsg(error.response.data.msg);
             Swal.fire({
                 icon: 'error',
-                title: 'Gagal',
+                title: 'Failed',
                 text: error.response.data.msg
             });
         }
@@ -108,7 +108,7 @@ const FormEditDataJabatan = () => {
                                             value={namaJabatan}
                                             onChange={(e) => setNamaJabatan(e.target.value)}
                                             required={true}
-                                            placeholder='Masukkan jabatan'
+                                            placeholder='Enter position'
                                             className='w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary'
                                         />
                                     </div>
@@ -123,7 +123,7 @@ const FormEditDataJabatan = () => {
                                             value={gajiPokok}
                                             onChange={(e) => setGajiPokok(e.target.value)}
                                             required
-                                            placeholder='Masukkan gaji pokok'
+                                            placeholder='Enter basic salary'
                                             className='w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary'
                                         />
                                     </div>
@@ -141,7 +141,7 @@ const FormEditDataJabatan = () => {
                                             value={tjTransport}
                                             onChange={(e) => setTjTransport(e.target.value)}
                                             required
-                                            placeholder='Masukkan tunjangan transport'
+                                            placeholder='Enter transport allowance'
                                             className='w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary'
                                         />
                                     </div>
@@ -157,7 +157,7 @@ const FormEditDataJabatan = () => {
                                             value={uangMakan}
                                             onChange={(e) => setUangMakan(e.target.value)}
                                             required
-                                            placeholder='Masukkan uang makan'
+                                            placeholder='Enter meal allowance'
                                             className='w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary'
                                         />
                                     </div>
@@ -170,7 +170,7 @@ const FormEditDataJabatan = () => {
                                     </div>
                                     <Link to="/data-jabatan" >
                                         <ButtonTwo  >
-                                            <span>Kembali</span>
+                                            <span>Back</span>
                                         </ButtonTwo>
                                     </Link>
                                 </div>

@@ -63,7 +63,7 @@ const DetailDataGaji = () => {
             <Breadcrumb pageName='Detail Data Gaji Pegawai' />
             <Link to='/data-gaji'>
                 <ButtonTwo>
-                    <span>Kembali</span>
+                    <span>Back</span>
                 </ButtonTwo>
             </Link>
             <div className='rounded-sm border border-stroke bg-white px-5 pt-6 pb-2.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:pb-1 mt-6'>
@@ -90,13 +90,13 @@ const DetailDataGaji = () => {
                                 {data.jabatan}
                             </h2>
                             <h2 className='font-medium mb-4 block text-black dark:text-white'>
-                                <span className='inline-block w-32 md:w-40'>Bulan</span>
+                                <span className='inline-block w-32 md:w-40'>Month</span>
                                 <span className='pl-[-8] md:pl-0'></span>
                                 <span className='inline-block w-7'>:</span>
                                 {data.bulan}
                             </h2>
                             <h2 className='font-medium mb-4 block text-black dark:text-white'>
-                                <span className='inline-block w-32 md:w-40'>Tahun</span>
+                                <span className='inline-block w-32 md:w-40'>Year</span>
                                 <span className='inline-block w-7'>:</span>
                                 {data.tahun}
                                 <span className='pl-[-8] md:pl-0'></span>

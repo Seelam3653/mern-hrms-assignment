@@ -54,18 +54,18 @@ const DataPotongan = () => {
 
     const onDeletePotongan = (id) => {
         Swal.fire({
-            title: 'Konfirmasi',
-            text: 'Apakah Anda yakin ingin Menghapus?',
+            title: 'Confirmation',
+            text: 'Are you sure you want to delete?',
             icon: 'question',
             showCancelButton: true,
-            confirmButtonText: 'Ya',
-            cancelButtonText: 'Tidak',
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No',
             reverseButtons: true,
         }).then((result) => {
             if (result.isConfirmed) {
                 dispatch(deleteDataPotongan(id)).then(() => {
                     Swal.fire({
-                        title: 'Berhasil',
+                        title: 'Success',
                         text: 'Data potongan berhasil dihapus.',
                         icon: 'success',
                         timer: 1000,
@@ -142,10 +142,10 @@ const DataPotongan = () => {
 
     return (
         <Layout>
-            <Breadcrumb pageName='Data Potongan' />
+            <Breadcrumb pageName='Deductions' />
             <Link to="/data-potongan/form-data-potongan/add" >
                 <ButtonOne  >
-                    <span>Tambah Potongan</span>
+                    <span>Add Deduction</span>
                     <span>
                         <FaPlus />
                     </span>

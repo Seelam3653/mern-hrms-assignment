@@ -103,7 +103,7 @@ const SlipGaji = () => {
                         </div>
                         <form onSubmit={handleSearch}>
                             {showMessage && (
-                                <p className="text-meta-1">Data tidak ditemukan</p>
+                                <p className="text-meta-1">Data not found</p>
                             )}
                             <div className='p-6.5'>
                                 <div className='mb-4.5 '>

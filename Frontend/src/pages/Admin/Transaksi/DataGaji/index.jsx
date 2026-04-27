@@ -172,12 +172,12 @@ const DataGaji = () => {
                 </div>
                 <form onSubmit={handleSearch}>
                     {showMessage && (
-                        <p className="text-meta-1">Data tidak ditemukan</p>
+                        <p className="text-meta-1">Data not found</p>
                     )}
                     <div className='flex flex-col md:flex-row md:justify-between items-center mt-4'>
                         <div className='relative w-full md:w-1/2 md:mr-2 mb-4 md:mb-0'>
                             <div className='relative'>
-                                <span className='px-6'>Bulan</span>
+                                <span className='px-6'>Month</span>
                                 <span className='absolute top-1/2 left-70 z-30 -translate-y-1/2 text-xl'>
                                     <MdOutlineKeyboardArrowDown />
                                 </span>
@@ -205,7 +205,7 @@ const DataGaji = () => {
                         </div>
                         <div className='relative w-full md:w-1/2 md:mr-2 mb-4 md:mb-0'>
                             <div className='relative'>
-                                <span className='px-6'>Tahun</span>
+                                <span className='px-6'>Year</span>
                                 <input
                                     type='number'
                                     placeholder='Masukkan Tahun...'
@@ -256,7 +256,7 @@ const DataGaji = () => {
                     <div className="relative flex-2 mb-4 md:mb-0">
                         <input
                             type='text'
-                            placeholder='Cari Nama Pegawai...'
+                            placeholder='Search Employee Name...'
                             value={filterNama}
                             onChange={handleNamaChange}
                             className='rounded-lg border-[1.5px] border-stroke bg-transparent py-2 pl-10 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary left-0'

@@ -22,7 +22,7 @@ const UbahPasswordAdmin = () => {
                 dispatch(changePassword(password, confPassword));
                 Swal.fire({
                     icon: 'success',
-                    title: 'Berhasil',
+                    title: 'Success',
                     text: 'Password Berhasil di Perbarui',
                     showConfirmButton: false,
                     timer: 1500,
@@ -30,7 +30,7 @@ const UbahPasswordAdmin = () => {
             } catch (error) {
                 Swal.fire({
                     icon: 'error',
-                    title: 'Gagal',
+                    title: 'Failed',
                     text: error.response?.data?.msg || 'Terjadi kesalahan',
                     confirmButtonText: 'Ok',
                 });
@@ -38,8 +38,8 @@ const UbahPasswordAdmin = () => {
         } else {
             Swal.fire({
                 icon: 'error',
-                title: 'Gagal',
-                text: 'Password dan Konfirmasi Password Tidak Cocok',
+                title: 'Failed',
+                text: 'Password dan Confirmation Password No Cocok',
                 confirmButtonText: 'Ok',
                 timer: 1500,
             });

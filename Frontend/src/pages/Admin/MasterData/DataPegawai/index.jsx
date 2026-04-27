@@ -83,18 +83,18 @@ const DataPegawai = () => {
 
     const onDeletePegawai = (id) => {
         Swal.fire({
-            title: 'Konfirmasi',
-            text: 'Apakah Anda yakin ingin Menghapus?',
+            title: 'Confirmation',
+            text: 'Are you sure you want to delete?',
             icon: 'question',
             showCancelButton: true,
-            confirmButtonText: 'Ya',
-            cancelButtonText: 'Tidak',
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No',
             reverseButtons: true,
         }).then((result) => {
             if (result.isConfirmed) {
                 dispatch(deleteDataPegawai(id)).then(() => {
                     Swal.fire({
-                        title: 'Berhasil',
+                        title: 'Success',
                         text: 'Data pegawai berhasil dihapus.',
                         icon: 'success',
                         timer: 1000,
@@ -175,7 +175,7 @@ const DataPegawai = () => {
             <div className="flex flex-wrap gap-2 mb-4">
                 <Link to="/data-pegawai/form-data-pegawai/add">
                     <ButtonOne>
-                        <span>Tambah Pegawai</span>
+                        <span>Add Employee</span>
                         <span>
                             <FaPlus />
                         </span>
@@ -203,8 +203,8 @@ const DataPegawai = () => {
                                 className="relative appearance-none rounded border border-stroke bg-transparent py-3 px-8 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input"
                             >
                                 <option value="">Status</option>
-                                <option value="Karyawan Tetap">Karyawan Tetap</option>
-                                <option value="Karyawan Tidak Tetap">Karyawan Tidak Tetap</option>
+                                <option value="Karyawan Tetap">Permanent Employee</option>
+                                <option value="Karyawan No Tetap">Karyawan No Tetap</option>
                             </select>
                         </div>
                     </div>
@@ -230,14 +230,14 @@ const DataPegawai = () => {
                                 <th className="py-4 px-4 font-medium text-black dark:text-white xl:pl-11">No</th>
                                 <th className="py-4 px-4 font-medium text-black dark:text-white xl:pl-11">Photo</th>
                                 <th className="py-4 px-4 font-medium text-black dark:text-white xl:pl-11">NIK</th>
-                                <th className="py-4 px-4 font-medium text-black dark:text-white">Nama Pegawai</th>
+                                <th className="py-4 px-4 font-medium text-black dark:text-white">Employee Name</th>
                                 {/* LF-103: Designation column */}
                                 <th className="py-4 px-4 font-medium text-black dark:text-white">Designation</th>
-                                <th className="py-4 px-4 font-medium text-black dark:text-white">Jenis Kelamin</th>
-                                <th className="py-4 px-4 font-medium text-black dark:text-white">Tanggal Masuk</th>
+                                <th className="py-4 px-4 font-medium text-black dark:text-white">Gender</th>
+                                <th className="py-4 px-4 font-medium text-black dark:text-white">Join Date</th>
                                 <th className="py-4 px-4 font-medium text-black dark:text-white">Status</th>
-                                <th className="py-4 px-4 font-medium text-black dark:text-white">Hak Akses</th>
-                                <th className="py-4 px-4 font-medium text-black dark:text-white">Aksi</th>
+                                <th className="py-4 px-4 font-medium text-black dark:text-white">Role</th>
+                                <th className="py-4 px-4 font-medium text-black dark:text-white">Action</th>
                             </tr>
                         </thead>
                         <tbody>

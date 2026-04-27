@@ -53,18 +53,18 @@ const DataJabatan = () => {
 
     const onDeleteJabatan = (id) => {
         Swal.fire({
-            title: 'Konfirmasi',
-            text: 'Apakah Anda yakin ingin Menghapus?',
+            title: 'Confirmation',
+            text: 'Are you sure you want to delete?',
             icon: 'question',
             showCancelButton: true,
-            confirmButtonText: 'Ya',
-            cancelButtonText: 'Tidak',
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No',
             reverseButtons: true,
         }).then((result) => {
             if (result.isConfirmed) {
                 dispatch(deleteDataJabatan(id)).then(() => {
                     Swal.fire({
-                        title: 'Berhasil',
+                        title: 'Success',
                         text: 'Data jabatan berhasil dihapus.',
                         icon: 'success',
                         timer: 1000,
@@ -141,10 +141,10 @@ const DataJabatan = () => {
 
     return (
         <Layout>
-            <Breadcrumb pageName='Data Jabatan' />
+            <Breadcrumb pageName='Positions' />
             <Link to="/data-jabatan/form-data-jabatan/add" >
                 <ButtonOne  >
-                    <span>Tambah Jabatan</span>
+                    <span>Add Position</span>
                     <span>
                         <FaPlus />
                     </span>
