@@ -48,6 +48,10 @@ const DataPegawai = db.define('data_pegawai', {
         allowNull: false
     },
     url: DataTypes.STRING,
+    designation: {
+        type: DataTypes.STRING(50),
+        allowNull: true,
+    },
     hak_akses: {
         type: DataTypes.STRING,
         allowNull: false,

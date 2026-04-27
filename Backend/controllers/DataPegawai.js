@@ -93,7 +93,7 @@ export const createDataPegawai = async (req, res) => {
     const {
         nik, nama_pegawai,
         username, password, confPassword, jenis_kelamin,
-        jabatan, tanggal_masuk,
+        jabatan, designation, tanggal_masuk,
         status, hak_akses
     } = req.body;
 
@@ -135,6 +135,7 @@ export const createDataPegawai = async (req, res) => {
                 password: hashPassword,
                 jenis_kelamin: jenis_kelamin,
                 jabatan: jabatan,
+                designation: designation || null,
                 tanggal_masuk: tanggal_masuk,
                 status: status,
                 photo: fileName,
@@ -163,7 +164,7 @@ export const updateDataPegawai = async (req, res) => {
     const {
         nik, nama_pegawai,
         username, jenis_kelamin,
-        jabatan, tanggal_masuk,
+        jabatan, designation, tanggal_masuk,
         status, hak_akses
     } = req.body;
 
@@ -174,6 +175,7 @@ export const updateDataPegawai = async (req, res) => {
             username: username,
             jenis_kelamin: jenis_kelamin,
             jabatan: jabatan,
+            designation: designation !== undefined ? designation : undefined,
             tanggal_masuk: tanggal_masuk,
             status: status,
             hak_akses: hak_akses

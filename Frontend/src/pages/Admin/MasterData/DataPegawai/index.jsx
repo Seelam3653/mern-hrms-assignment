@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 import Layout from '../../../../layout';
 import { Link, useNavigate } from 'react-router-dom';
 import { Breadcrumb, ButtonOne } from '../../../../components';
@@ -9,8 +9,33 @@ import Swal from 'sweetalert2';
 import { deleteDataPegawai, getDataPegawai, getMe } from '../../../../config/redux/action';
 import { BiSearch } from 'react-icons/bi';
 import { MdKeyboardDoubleArrowLeft, MdKeyboardDoubleArrowRight, MdOutlineKeyboardArrowDown } from 'react-icons/md';
+import { FiDownload } from 'react-icons/fi';
 
 const ITEMS_PER_PAGE = 4;
+
+// LF-104: CSV Export helper
+const exportToCSV = (data) => {
+    const headers = ['No', 'NIK', 'Nama Pegawai', 'Designation', 'Jenis Kelamin', 'Jabatan', 'Tanggal Masuk', 'Status', 'Hak Akses'];
+    const rows = data.map((d, i) => [
+        i + 1,
+        d.nik,
+        d.nama_pegawai,
+        d.designation || '-',
+        d.jenis_kelamin,
+        d.jabatan,
+        d.tanggal_masuk,
+        d.status,
+        d.hak_akses,
+    ]);
+    const csvContent = [headers, ...rows].map(row => row.map(v => `"${String(v).replace(/"/g, '""')}"`).join(',')).join('\n');
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'employee_list.csv';
+    link.click();
+    URL.revokeObjectURL(url);
+};
 
 const DataPegawai = () => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -147,14 +172,24 @@ const DataPegawai = () => {
     return (
         <Layout>
             <Breadcrumb pageName="Data Pegawai" />
-            <Link to="/data-pegawai/form-data-pegawai/add">
-                <ButtonOne>
-                    <span>Tambah Pegawai</span>
-                    <span>
-                        <FaPlus />
-                    </span>
-                </ButtonOne>
-            </Link>
+            <div className="flex flex-wrap gap-2 mb-4">
+                <Link to="/data-pegawai/form-data-pegawai/add">
+                    <ButtonOne>
+                        <span>Tambah Pegawai</span>
+                        <span>
+                            <FaPlus />
+                        </span>
+                    </ButtonOne>
+                </Link>
+                {/* LF-104: CSV Export Button */}
+                <button
+                    onClick={() => exportToCSV(filteredDataPegawai)}
+                    className="flex items-center gap-2 px-4 py-2 rounded bg-green-600 hover:bg-green-700 text-white font-medium text-sm transition"
+                >
+                    <FiDownload />
+                    Download CSV
+                </button>
+            </div>
             <div className="rounded-sm border border-stroke bg-white px-5 pt-6 pb-2.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:pb-1 mt-6">
                 <div className="flex justify-between items-center mt-4 flex-col md:flex-row md:justify-between">
                     <div className="relative flex-1 md:mr-2 mb-4 md:mb-0">
@@ -187,14 +222,17 @@ const DataPegawai = () => {
                     </div>
                 </div>
 
+                {/* LF-105: Responsive table â€” overflow-x-auto allows horizontal scroll on mobile */}
                 <div className="max-w-full overflow-x-auto py-4">
-                    <table className="w-full table-auto">
+                    <table className="w-full table-auto min-w-max">
                         <thead>
                             <tr className="bg-gray-2 text-left dark:bg-meta-4">
                                 <th className="py-4 px-4 font-medium text-black dark:text-white xl:pl-11">No</th>
                                 <th className="py-4 px-4 font-medium text-black dark:text-white xl:pl-11">Photo</th>
                                 <th className="py-4 px-4 font-medium text-black dark:text-white xl:pl-11">NIK</th>
                                 <th className="py-4 px-4 font-medium text-black dark:text-white">Nama Pegawai</th>
+                                {/* LF-103: Designation column */}
+                                <th className="py-4 px-4 font-medium text-black dark:text-white">Designation</th>
                                 <th className="py-4 px-4 font-medium text-black dark:text-white">Jenis Kelamin</th>
                                 <th className="py-4 px-4 font-medium text-black dark:text-white">Tanggal Masuk</th>
                                 <th className="py-4 px-4 font-medium text-black dark:text-white">Status</th>
@@ -221,6 +259,10 @@ const DataPegawai = () => {
                                         </td>
                                         <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
                                             <p className="text-black dark:text-white">{data.nama_pegawai}</p>
+                                        </td>
+                                        {/* LF-103: show designation */}
+                                        <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
+                                            <p className="text-black dark:text-white">{data.designation || '-'}</p>
                                         </td>
                                         <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
                                             <p className="text-black dark:text-white">{data.jenis_kelamin}</p>
@@ -285,3 +327,4 @@ const DataPegawai = () => {
 };
 
 export default DataPegawai;
+
