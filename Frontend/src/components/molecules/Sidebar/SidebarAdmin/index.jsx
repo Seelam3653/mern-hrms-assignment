@@ -176,7 +176,7 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
                                 (isActive && '!text-white')
                               }
                             >
-                              Data Pegawai
+                              Employees
                             </NavLink>
                           </li>
                           <li>
@@ -187,9 +187,9 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
                                 (isActive && '!text-white')
                               }
                             >
-                              Data Jabatan
+                              Positions
                             </NavLink>
-                          </li>
+                          </li> 
                         </ul>
                       </div>
                       {/* <!-- Dropdown Menu End --> */}
@@ -222,7 +222,7 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
                         }}
                       >
                         <FaRegMoneyBillAlt />
-                        Transaksi
+                        Transactions
                         <MdKeyboardArrowDown className={`absolute right-4 top-1/2 -translate-y-1/2 fill-current text-2xl ${open && 'rotate-180'
                           }`} />
                       </NavLink>
@@ -240,7 +240,7 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
                                 (isActive && '!text-white')
                               }
                             >
-                              Data Kehadiran
+                              Attendance
                             </NavLink>
                           </li>
                           <li>
@@ -251,7 +251,7 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
                                 (isActive && '!text-white')
                               }
                             >
-                              Data Potongan
+                              Deductions
                             </NavLink>
                           </li>
                           <li>
@@ -262,7 +262,7 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
                                 (isActive && '!text-white')
                               }
                             >
-                              Data Gaji
+                              Salary
                             </NavLink>
                           </li>
                         </ul>
@@ -297,7 +297,7 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
                         }}
                       >
                         <TfiPrinter />
-                        Laporan
+                        Reports
                         <MdKeyboardArrowDown className={`absolute right-4 top-1/2 -translate-y-1/2 fill-current text-2xl ${open && 'rotate-180'
                           }`} />
                       </NavLink>
@@ -315,7 +315,7 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
                                 (isActive && '!text-white')
                               }
                             >
-                              Laporan Gaji
+                              Salary Report
                             </NavLink>
                           </li>
                           <li>
@@ -326,7 +326,7 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
                                 (isActive && '!text-white')
                               }
                             >
-                              Laporan Absensi
+                              Attendance Report
                             </NavLink>
                           </li>
                           <li>
@@ -337,7 +337,7 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
                                 (isActive && '!text-white')
                               }
                             >
-                              Slip Gaji
+                              Payslip
                             </NavLink>
                           </li>
                         </ul>
@@ -372,7 +372,7 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
                         }}
                       >
                         <FiSettings />
-                        Pengaturan
+                        Settings
                         <MdKeyboardArrowDown className={`absolute right-4 top-1/2 -translate-y-1/2 fill-current text-2xl ${open && 'rotate-180'
                           }`} />
                       </NavLink>
@@ -390,7 +390,7 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
                                 (isActive && '!text-white')
                               }
                             >
-                              Ubah Password
+                              Change Password
                             </NavLink>
                           </li>
                           <li>
