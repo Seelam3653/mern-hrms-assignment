@@ -65,7 +65,7 @@ const DataJabatan = () => {
                 dispatch(deleteDataJabatan(id)).then(() => {
                     Swal.fire({
                         title: 'Success',
-                        text: 'Data jabatan berhasil dihapus.',
+                        text: 'Position data successfully deleted.',
                         icon: 'success',
                         timer: 1000,
                         timerProgressBar: true,

@@ -15,7 +15,7 @@ const ITEMS_PER_PAGE = 4;
 
 // LF-104: CSV Export helper
 const exportToCSV = (data) => {
-    const headers = ['No', 'NIK', 'Nama Pegawai', 'Designation', 'Jenis Kelamin', 'Jabatan', 'Tanggal Masuk', 'Status', 'Hak Akses'];
+    const headers = ['No', 'NIK', 'Employee Name', 'Designation', 'Gender', 'Position', 'Join Date', 'Status', 'Role'];
     const rows = data.map((d, i) => [
         i + 1,
         d.nik,
@@ -95,7 +95,7 @@ const DataPegawai = () => {
                 dispatch(deleteDataPegawai(id)).then(() => {
                     Swal.fire({
                         title: 'Success',
-                        text: 'Data pegawai berhasil dihapus.',
+                        text: 'Employee data successfully deleted.',
                         icon: 'success',
                         timer: 1000,
                         timerProgressBar: true,
@@ -171,7 +171,7 @@ const DataPegawai = () => {
 
     return (
         <Layout>
-            <Breadcrumb pageName="Data Pegawai" />
+            <Breadcrumb pageName="Employees" />
             <div className="flex flex-wrap gap-2 mb-4">
                 <Link to="/data-pegawai/form-data-pegawai/add">
                     <ButtonOne>

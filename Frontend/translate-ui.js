@@ -126,6 +126,61 @@ const translations = {
     '>Admin<': '>Admin<',
     '>Pegawai<': '>Employee<',
     '>Semua Data<': '>All Data<',
+    // Missing texts from Data Pegawai / SweetAlert / Breadcrumbs
+    '"Data Pegawai"': '"Employees"',
+    "'Data pegawai berhasil dihapus.'": "'Employee data successfully deleted.'",
+    "'Data jabatan berhasil dihapus.'": "'Position data successfully deleted.'",
+    "'Data kehadiran berhasil dihapus.'": "'Attendance data successfully deleted.'",
+    "'Data potongan berhasil dihapus.'": "'Deduction data successfully deleted.'",
+    "'Data overtime berhasil dihapus.'": "'Overtime data successfully deleted.'",
+    "'Menampilkan '": "'Showing '",
+    "' dari '": "' of '",
+    "' Data Pegawai'": "' Employees'",
+    "' Data Jabatan'": "' Positions'",
+    "' Data Kehadiran'": "' Attendance'",
+    "' Data Potongan'": "' Deductions'",
+    "' Data Gaji'": "' Salary Data'",
+    "' Data Overtime'": "' Overtime Data'",
+
+    // CSV Headers
+    "'Nama Pegawai'": "'Employee Name'",
+    "'Jenis Kelamin'": "'Gender'",
+    "'Jabatan'": "'Position'",
+    "'Tanggal Masuk'": "'Join Date'",
+    "'Hak Akses'": "'Role'",
+    "'Gaji Pokok'": "'Basic Salary'",
+    "'Tj. Transport'": "'Transport Allowance'",
+    "'Uang Makan'": "'Meal Allowance'",
+    "'Total Gaji'": "'Total Salary'",
+    "'Potongan'": "'Deduction'",
+    "'Jumlah Potongan'": "'Deduction Amount'",
+
+    // Breadcrumbs
+    'pageName="Data Pegawai"': 'pageName="Employees"',
+    'pageName="Data Jabatan"': 'pageName="Positions"',
+    'pageName="Data Kehadiran"': 'pageName="Attendance"',
+    'pageName="Data Potongan"': 'pageName="Deductions"',
+    'pageName="Data Gaji"': 'pageName="Salary"',
+    'pageName="Data Overtime"': 'pageName="Overtime"',
+    'pageName="Laporan Gaji"': 'pageName="Salary Report"',
+    'pageName="Laporan Absensi"': 'pageName="Attendance Report"',
+    'pageName="Slip Gaji"': 'pageName="Payslip"',
+
+    // Form Titles
+    '>Tambah Data Pegawai<': '>Add Employee<',
+    '>Edit Data Pegawai<': '>Edit Employee<',
+    '>Tambah Data Jabatan<': '>Add Position<',
+    '>Edit Data Jabatan<': '>Edit Position<',
+    '>Tambah Data Kehadiran<': '>Add Attendance<',
+    '>Edit Data Kehadiran<': '>Edit Attendance<',
+    '>Tambah Data Potongan<': '>Add Deduction<',
+    '>Edit Data Potongan<': '>Edit Deduction<',
+    '>Tambah Data Overtime<': '>Add Overtime<',
+    '>Edit Data Overtime<': '>Edit Overtime<',
+
+    // Other missing
+    '>Pilih Bulan<': '>Select Month<',
+    '>Pilih Tahun<': '>Select Year<',
 };
 
 function translateFiles(dir) {

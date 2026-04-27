@@ -79,7 +79,7 @@ const DataKehadiran = () => {
                 dispatch(deleteDataKehadiran(id)).then(() => {
                     Swal.fire({
                         title: 'Success',
-                        text: 'Data kehadiran berhasil dihapus.',
+                        text: 'Attendance data successfully deleted.',
                         icon: 'success',
                         timer: 1000,
                         timerProgressBar: true,
@@ -176,7 +176,7 @@ const DataKehadiran = () => {
                                 onChange={handleBulanChange}
                                 className='relative appearance-none rounded border border-stroke bg-transparent py-2 px-18 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input'
                             >
-                                <option value=''>Pilih Bulan</option>
+                                <option value=''>Select Month</option>
                                 <option value='Januari'>Januari</option>
                                 <option value='Februari'>Februari</option>
                                 <option value='Maret'>Maret</option>

@@ -99,7 +99,7 @@ const LaporanAbsensi = () => {
                                                 onChange={handleSearchMonth}
                                                 required
                                             >
-                                                <option value=''>Pilih Bulan</option>
+                                                <option value=''>Select Month</option>
                                                 <option value='Januari'>Januari</option>
                                                 <option value='Februari'>Februari</option>
                                                 <option value='Maret'>Maret</option>

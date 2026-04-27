@@ -150,7 +150,7 @@ const DataGajiPegawai = () => {
 
   return (
     <Layout>
-      <Breadcrumb pageName="Data Gaji" />
+      <Breadcrumb pageName="Salary" />
 
       <div className="mt-6 rounded-sm border border-stroke bg-white px-5 pb-2.5 pt-6 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:pb-1">
         <div className="max-w-full overflow-x-auto py-4">
