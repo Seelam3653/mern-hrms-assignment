@@ -185,6 +185,13 @@ export const deleteDataKehadiran = async (req, res) => {
 // method untuk create data potongan gaji
 export const createDataPotonganGaji = async (req, res) => {
   const { id, potongan, jml_potongan } = req.body;
+
+  // LF-102: Salary/amount fields must be positive numbers
+  const amount = Number(jml_potongan);
+  if (isNaN(amount) || amount <= 0) {
+    return res.status(400).json({ msg: 'Jumlah potongan harus berupa angka positif (lebih dari 0).' });
+  }
+
   try {
     const nama_potongan = await PotonganGaji.findOne({
       where: {
@@ -197,7 +204,7 @@ export const createDataPotonganGaji = async (req, res) => {
       await PotonganGaji.create({
         id: id,
         potongan: potongan,
-        jml_potongan: jml_potongan.toLocaleString(),
+        jml_potongan: amount.toLocaleString(),
       });
       res.json({ msg: "Tambah Data Potongan Gaji Berhasil" });
     }
